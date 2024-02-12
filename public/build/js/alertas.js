@@ -1,0 +1,1 @@
+function confirmarBorrado(e,n){e.preventDefault(),console.log(n),Swal.fire({title:"Confirmación",text:"¿Estás seguro de que deseas eliminar este Servicio?",icon:"warning",showCancelButton:!0,confirmButtonColor:"#3085d6",cancelButtonColor:"#d33",confirmButtonText:"Sí, eliminar",cancelButtonText:"Cancelar"}).then(e=>{e.isConfirmed&&document.getElementById(n).submit()})}
