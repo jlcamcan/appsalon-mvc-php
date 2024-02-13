@@ -21,8 +21,16 @@
         margin: 0 auto;
         padding: 3rem 0;
         @include m.tablet {
-            padding-right: 2rem;
             overflow: scroll;
+            padding: 0 2rem 0 0;
+            overflow-x: hidden;
+            &::-webkit-scrollbar {
+                width: 1rem;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: v.$azul;
+                border-radius: 5px;
+            }
         }
     }
 }
