@@ -20,6 +20,7 @@
         width: 95%;
         margin: 0 auto;
         padding: 3rem 0;
+        overflow-x: hidden;
         @include m.tablet {
             overflow: scroll;
             padding: 0 2rem 0 0;
@@ -37,14 +38,33 @@
 
 .barra {
     margin: v.$separacion 0;
-    @include m.tablet {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    p span {
+        font-weight: v.$bold;
     }
     .boton {
         @include m.boton(v.$verde, v.$blanco);
         margin: 0;
+    }
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .boton {
+            margin: 0;
+            font-size: 1.4rem;
+            padding: 1.5rem 1.5rem;
+        }
+        p {
+            font-size: 2rem;
+        }
+    }
+    @include m.desktop {
+        p {
+            font-size: 2rem;
+        }
+        .boton {
+            @include m.boton(v.$verde, v.$blanco);
+        }
     }
 }
 
@@ -54,8 +74,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .boton {
+            padding: 1rem 0.8rem;
+            font-size: 1.8rem;
+        }
+    }
+    @include m.desktop {
+        .boton {
+            @include m.boton(v.$azul, v.$blanco);
+        }
     }
     .boton {
-        margin: 0 0 1rem 0;
+        margin: 0 0 1rem;
     }
 }

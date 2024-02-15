@@ -9,7 +9,7 @@
         background-color: v.$azul;
         border: none;
         color: v.$blanco;
-        padding: 1rem;
+        padding: .8rem 0;
         width: 100%;
         margin-bottom: 1rem;
         text-transform: uppercase;
@@ -22,6 +22,11 @@
         &.actual {
             background-color: v.$blanco;
             color: v.$azul;
+        }
+    }
+    @include m.desktop {
+        button {
+            padding: 1.5rem 1.5rem;
         }
     }
 }

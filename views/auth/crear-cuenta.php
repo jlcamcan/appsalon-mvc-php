@@ -13,17 +13,17 @@
     <div class="campo">
         <label for="apellidos">Apellidos</label>
         <input type="text" id="apellidos" name="apellidos", placeholder="Tus Apellidos"
-        value="<?php echo s($usuario->apellidos);?>">>
+        value="<?php echo s($usuario->apellidos);?>">
     </div>
     <div class="campo">
         <label for="telefono">Teléfono</label>
         <input type="tel" id="telefono" name="telefono", placeholder="Tu Teléfono"
-        value="<?php echo s($usuario->telefono);?>">>
+        value="<?php echo s($usuario->telefono);?>">
     </div>
     <div class="campo">
         <label for="email">E-mail</label>
         <input type="email" id="email" name="email", placeholder="Tu Correo Electrónico"
-        value="<?php echo s($usuario->email);?>">>
+        value="<?php echo s($usuario->email);?>">
     </div>
     <div class="campo">
         <label for="password">Contraseña</label>

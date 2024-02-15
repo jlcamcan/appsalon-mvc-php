@@ -8,9 +8,12 @@
 .campo {
     display: flex;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
     align-items: center;
     label {
-        flex: 0 0 11rem;
+        flex: 0 0 13rem;
+        font-size: 2rem;
+        font-weight: v.$bold
     }
     input {
         flex: 1;

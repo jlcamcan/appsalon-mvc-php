@@ -1,5 +1,5 @@
 <div class="barra">
-    <p>Usuario: <?php echo $_SESSION['nombre'] ?? '';?> </p>
+    <p><span>Usuario</span><br> <?php echo $_SESSION['nombre'] ?? '';?> </p>
     <a class="boton" href="/logout">Cerrar Sesión</a>
 </div>
 
