@@ -82,9 +82,10 @@
     @include m.desktop {
         .boton {
             @include m.boton(v.$azul, v.$blanco);
+            padding: 1.5rem 3rem;
         }
     }
     .boton {
-        margin: 0 0 1rem;
+        margin: 0 1px 1rem;
     }
 }

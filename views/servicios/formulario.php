@@ -11,11 +11,7 @@
 <div class="campo">
     <label for="precio">Precio</label>
     <input 
-        type="number" 
-        id="precio" 
-        name="precio" 
-        min="0"
-        placeholder="Precio del Servicio" 
+        type="number" id="precio" name="precio" min="0" step="0.01" placeholder="Precio del Servicio" 
         value="<?php echo $servicio->precio;?>"
     >
 </div>
