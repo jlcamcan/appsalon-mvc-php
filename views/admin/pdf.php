@@ -2,7 +2,7 @@
 <?php 
 //debuguear($fechaFormateada);
 setlocale(LC_MONETARY, 'es_ES');
-require('../vendor/fpdf/fpdf.php');
+require('../src/fpdf/fpdf.php');
 $EURO = " " . chr(128);
 
 class PDF extends FPDF
