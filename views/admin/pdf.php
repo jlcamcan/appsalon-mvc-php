@@ -2,7 +2,7 @@
 <?php 
 //debuguear($fechaFormateada);
 setlocale(LC_MONETARY, 'es_ES');
-require('../src/fpdf/fpdf.php');
+require('fpdf/fpdf.php');
 $EURO = " " . chr(128);
 
 class PDF extends FPDF
@@ -84,7 +84,7 @@ foreach ($citas as $key => $cita){
     if(esUltimo($actual,$proximo)){ 
         $pdf->SetFont('Arial', 'B', 12); //tipo fuente, cursiva, tamañoTexto
         $pdf->Cell(20, 2, ("________________"), 0, 1, 'L', 0);
-        $pdf->Cell(20, 10, ("Total: ". $total . $EURO), 0, 1, 'L', 0);
+        $pdf->Cell(20, 10, ("Total: ". number_format($total,2,',','.') . $EURO), 0, 1, 'L', 0);
         $pdf->Cell(20, -6, ("________________"), 0, 1, 'L', 0);
         $pdf->Ln(15);
         $pdf->SetFont('Arial', '', 12); //tipo fuente, cursiva, tamañoTexto

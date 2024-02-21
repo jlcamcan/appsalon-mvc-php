@@ -1,5 +1,5 @@
 <h1 class="nombre-pagina">Panel de Administración</h1>
-
+<p class="descripcion-pagina">Control de Citas y Servicios</p>
 <?php 
     include_once __DIR__ . '/../templates/barra.php';
 ?> 
@@ -33,7 +33,7 @@
                     <h3>Servicios</h3>
             <?php  $idCita = $cita->id;
             } //Fin del if ?>  
-                 <p class="servicio"><?php echo $cita->servicio . " - " . $cita->precio . " €"; 
+                 <p class="servicio"><?php echo $cita->servicio . " - " . number_format($cita->precio,2,',','.') . " €"; 
                  $total += $cita->precio;
                  ?> </p>
                  <?php 
@@ -41,12 +41,11 @@
                     $proximo = $citas[$key+1]->id ?? 0;
                     if(esUltimo($actual,$proximo)){ 
                 ?>
-                        <p class="total">Total: <span><?php echo $total . " €"; ?></span></p>
+                        <p class="total">Total: <span><?php echo number_format($total,2,',','.') . " €"; ?></span></p>
                         <form method="POST" action="/api/eliminar" id="formEliminarCita-<?php echo  $cita->id; ?>">
                             <input type="hidden" name="id" value="<?php echo $cita->id; ?>">
                             <button type="submit" class="boton-eliminar" onclick="confirmarEliminarCita(event, 'formEliminarCita-<?php echo $cita->id; ?>')">Eliminar</button>
                         </form>
-
                         <?php 
                     }
         };//fin del foreach ?> 
