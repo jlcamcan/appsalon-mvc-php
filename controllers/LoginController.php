@@ -69,7 +69,7 @@ class LoginController{
                   //Alerta de exito
                   Usuario::setAlerta('exito', 'Revisa tu correo electrónico');
                   //Enviar el correo con las instrucciones de reseteo
-                  $email = new Email($usuario->nombre, $usuario->email, $usuario->token);
+                  $email = new Email($usuario->email, $usuario->nombre, $usuario->token);
                   $email->enviarInstrucciones();
                 }else{
                     Usuario::setAlerta('error','El Usuario no existe ó no está confirmado');
