@@ -2,7 +2,6 @@
     <p><span>Usuario</span><br> <?php echo $_SESSION['nombre'] ?? '';?> </p>
     <a class="boton" href="/logout">Cerrar Sesión</a>
 </div>
-
 <?php if(isset($_SESSION['admin'])){ ?>
     <div class="barra-servicios">
         <a class="boton" href="/admin">Ver Citas</a>
