@@ -33,7 +33,7 @@ class Email{
             $mail->Port = $_ENV['EMAIL_PORT'];
 
             //Destinatario
-            $mail->setFrom('appsalonpeluqueria@gmail.com', 'AppSalon Peluquería'); 
+            $mail->setFrom($_ENV['EMAIL_USER'], 'AppSalon Peluquería'); 
             $mail->addAttachment('../public/build/img/logo-2.jpg', 'foto.jpg');
             $mail->addAddress($this->email, $this->nombre);
       
@@ -71,7 +71,7 @@ class Email{
             $mail->Username =  $_ENV['EMAIL_USER'];
             $mail->Password =  $_ENV['EMAIL_PASS'];
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-            $mail->setFrom("appsalonpeluqueria@gmail.com", 'App Salon Peluquería');
+            $mail->setFrom( $_ENV['EMAIL_USER'], 'App Salon Peluquería');
             //Adjuntar un archivo
             $mail->addAttachment('../public/build/img/logo-2.jpg', 'foto.jpg');
             $mail->addAddress($this->email, "AppSalon.com");
